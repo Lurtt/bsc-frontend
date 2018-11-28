@@ -1,21 +1,3 @@
-import { Component } from 'react'
-import PropTypes from 'prop-types'
+const Home = () => <h1>HOME PAGE CONTENT</h1>
 
-import CloseButton from '../components/styles/CloseButton'
-
-console.log('aaa')
-
-class index extends Component {
-  render() {
-    return (
-      <div>
-        <div>daf</div>
-        <CloseButton>33</CloseButton>
-      </div>
-    )
-  }
-}
-
-index.propTypes = {}
-
-export default index
+export default Home

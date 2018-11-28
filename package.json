@@ -1,7 +1,7 @@
 {
-  "name": "sick-fits-frontend",
+  "name": "frontend-stack",
   "version": "1.0.0",
-  "description": "Sick Fits! An example React, GraphQL, Next and Apollo",
+  "description": "An example React, GraphQL, Next and Apollo",
   "main": "index.js",
   "scripts": {
     "dev": "next -p 8080",
@@ -11,7 +11,7 @@
     "test-win": "SET NODE_ENV=test&& jest --watch",
     "heroku-postbuild": "next build"
   },
-  "author": "",
+  "author": "Lukas Pospisil",
   "license": "ISC",
   "dependencies": {
     "apollo-boost": "^0.1.22",
@@ -24,6 +24,7 @@
     "next": "^7.0.2",
     "next-with-apollo": "^3.3.0",
     "nprogress": "^0.2.0",
+    "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-adopt": "^0.6.0",
     "react-apollo": "^2.3.1",
@@ -53,8 +54,7 @@
     "graphql-tools": "^4.0.0",
     "jest": "^23.6.0",
     "jest-transform-graphql": "^2.1.0",
-    "prettier": "^1.15.2",
-    "prop-types": "^15.6.2"
+    "prettier": "^1.15.2"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/jest.setup.js",
