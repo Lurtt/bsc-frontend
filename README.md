@@ -1,3 +1,3 @@
-# Advanced-React
+# Frontend stack
 
 frontend
