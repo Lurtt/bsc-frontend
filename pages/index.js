@@ -1,11 +1,18 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
 import PropTypes from 'prop-types'
+
+import CloseButton from '../components/styles/CloseButton'
 
 console.log('aaa')
 
 class index extends Component {
   render() {
-    return <div>HIHIHI</div>
+    return (
+      <div>
+        <div>daf</div>
+        <CloseButton>33</CloseButton>
+      </div>
+    )
   }
 }
 
