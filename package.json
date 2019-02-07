@@ -4,9 +4,9 @@
   "description": "An example React, GraphQL, Next and Apollo",
   "main": "index.js",
   "scripts": {
-    "dev": "next -p 8080",
+    "dev": "next -p 3001",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3000",
     "test": "NODE_ENV=test jest --watch",
     "test-win": "SET NODE_ENV=test&& jest --watch",
     "heroku-postbuild": "next build"
@@ -37,7 +37,7 @@
   "devDependencies": {
     "@babel/core": "^7.1.6",
     "babel-eslint": "^10.0.1",
-    "babel-jest": "^23.6.0",
+    "babel-jest": "^24.1.0",
     "babel-plugin-module-resolver": "^3.1.1",
     "babel-plugin-styled-components": "^1.9.1",
     "casual": "^1.5.19",
@@ -52,7 +52,7 @@
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.11.1",
     "graphql-tools": "^4.0.0",
-    "jest": "^23.6.0",
+    "jest": "^24.1.0",
     "jest-transform-graphql": "^2.1.0",
     "prettier": "^1.15.2"
   },
