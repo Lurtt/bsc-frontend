@@ -5,9 +5,14 @@ ENV NODE_ENV production
 
 WORKDIR /usr/src/app
 COPY ["package.json", "yarn.lock", "./"]
+
 RUN apk add yarn
-RUN yarn install --production
+RUN yarn cache clean --force && yarn install --production
+
 COPY . .
+
 RUN yarn build
-EXPOSE 8081
+
+EXPOSE 3000
+
 CMD yarn start
