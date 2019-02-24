@@ -1,7 +1,7 @@
-import { Component } from 'react'
+import { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 
-import { Header, Meta } from '.'
+import { Meta, NoteProvider } from '.'
 
 class Page extends Component {
   static propTypes = {
@@ -12,11 +12,12 @@ class Page extends Component {
     const { children } = this.props
 
     return (
-      <div>
+      <Fragment>
         <Meta />
-        <Header />
-        {children}
-      </div>
+        <NoteProvider>
+          <main>{children}</main>
+        </NoteProvider>
+      </Fragment>
     )
   }
 }

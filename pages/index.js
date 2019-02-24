@@ -1,3 +1,5 @@
-const Home = () => <h1>HOME PAGE CONTENT</h1>
+import { Notes } from '../components'
+
+const Home = () => <Notes />
 
 export default Home
