@@ -9,15 +9,14 @@ const Meta = () => (
     />
     <meta name="theme-color" content="#000000" />
 
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
     <link rel="shortcut icon" href="/static/favicon.png" />
     <link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://unpkg.com/@reach/dialog/styles.css"
-    />
 
-    <title>Frontend stack</title>
+    <title>BSC Notes</title>
   </Head>
 )
 

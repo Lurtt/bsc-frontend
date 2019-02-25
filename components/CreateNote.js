@@ -3,6 +3,7 @@ import { Mutation } from 'react-apollo'
 import gql from 'graphql-tag'
 import keycode from 'keycode'
 
+import { Create, Info } from './styles'
 import { NoteContext } from '.'
 
 const CREATE_NOTE_MUTATION = gql`
@@ -37,13 +38,18 @@ const CreateNote = () => {
       refetchQueries={['ALL_NOTES_QUERY']}
     >
       {(createNote, { loading }) => (
-        <input
-          value={note}
-          onChange={handleOnChange}
-          ref={inputEl}
-          onKeyPress={e => handleOnKeyPress(e, createNote)}
-          disabled={loading}
-        />
+        <div>
+          <Create
+            value={note}
+            placeholder="What needs to be noted?"
+            ref={inputEl}
+            onChange={handleOnChange}
+            onKeyPress={e => handleOnKeyPress(e, createNote)}
+            disabled={loading}
+            fullwidth
+          />
+          {note && <Info>Press Enter to create new note</Info>}
+        </div>
       )}
     </Mutation>
   )

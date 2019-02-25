@@ -2,6 +2,7 @@ import { createContext } from 'react'
 import gql from 'graphql-tag'
 
 import { CreateNote, NoteList } from '.'
+import { Section, Header } from './styles'
 
 const NoteContext = createContext()
 
@@ -16,10 +17,11 @@ const ALL_NOTES_QUERY = gql`
 `
 
 const Notes = () => (
-  <section>
+  <Section>
+    <Header>Notes</Header>
     <CreateNote />
     <NoteList />
-  </section>
+  </Section>
 )
 
 export { ALL_NOTES_QUERY, NoteContext }
