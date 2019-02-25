@@ -28,6 +28,7 @@ const NoteList = () => {
         if (loading) return <Loading>Loading...</Loading>
         if (error) return <div>{error.message}</div>
         if (notes.length === 0) return <Loading>No record found</Loading>
+
         return notes.map(noteItem => (
           <NoteItem key={noteItem.id} {...noteItem} />
         ))
@@ -36,4 +37,5 @@ const NoteList = () => {
   )
 }
 
+export { ALL_NOTES_QUERY }
 export default NoteList

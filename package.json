@@ -39,9 +39,6 @@
     "babel-plugin-module-resolver": "^3.2.0",
     "babel-plugin-styled-components": "^1.10.0",
     "casual": "^1.6.0",
-    "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.9.1",
-    "enzyme-to-json": "^3.3.5",
     "eslint": "^5.14.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.0.0",
@@ -51,19 +48,9 @@
     "eslint-plugin-react": "^7.12.4",
     "graphql-tools": "^4.0.4",
     "jest": "^24.1.0",
+    "jest-dom": "^3.1.2",
     "jest-transform-graphql": "^2.1.0",
-    "prettier": "^1.16.4"
-  },
-  "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>/jest.setup.js",
-    "testPathIgnorePatterns": [
-      "<rootDir>/.next/",
-      "<rootDir>/node_modules/"
-    ],
-    "transform": {
-      "\\.(gql|graphql)$": "jest-transform-graphql",
-      ".*": "babel-jest",
-      "^.+\\.js?$": "babel-jest"
-    }
+    "prettier": "^1.16.4",
+    "react-testing-library": "^6.0.0"
   }
 }

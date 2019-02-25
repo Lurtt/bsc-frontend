@@ -117,4 +117,5 @@ NoteItem.propTypes = {
   finished: PropTypes.bool.isRequired,
 }
 
+export { UPDATE_NOTE_MUTATION }
 export default NoteItem

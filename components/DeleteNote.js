@@ -38,4 +38,5 @@ DeleteNote.propTypes = {
   id: PropTypes.string.isRequired,
 }
 
+export { DELETE_NOTE_MUTATION }
 export default DeleteNote
