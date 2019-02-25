@@ -9,10 +9,14 @@ const Note = styled.article`
   grid-template-areas: 'done title icons';
 `
 
+const TitleContainer = styled.div`
+  display: grid;
+  grid-area: title;
+`
+
 const Title = styled(Input).attrs(({ value }) => ({
   title: value,
 }))`
-  grid-area: title;
   text-decoration: ${({ finished }) => (finished ? 'line-through' : 'none')};
   color: ${({ theme, finished }) =>
     finished ? theme.color.disabled : theme.color.primary};
@@ -23,4 +27,4 @@ const Icons = styled.div`
   justify-self: flex-end;
 `
 
-export { Note, Title, Icons }
+export { Note, TitleContainer, Title, Icons }

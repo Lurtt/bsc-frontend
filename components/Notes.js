@@ -1,10 +1,7 @@
-import { createContext } from 'react'
 import gql from 'graphql-tag'
 
 import { CreateNote, NoteList } from '.'
 import { Section, Header } from './styles'
-
-const NoteContext = createContext()
 
 const ALL_NOTES_QUERY = gql`
   query ALL_NOTES_QUERY($search: String) {
@@ -24,5 +21,5 @@ const Notes = () => (
   </Section>
 )
 
-export { ALL_NOTES_QUERY, NoteContext }
+export { ALL_NOTES_QUERY }
 export default Notes

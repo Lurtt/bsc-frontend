@@ -1,31 +1,41 @@
-import { Component, Fragment } from 'react'
+import { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { ThemeProvider } from 'styled-components'
+import Router from 'next/router'
+import NProgress from 'nprogress'
 
 import { GlobalStyle, defaultTheme } from '../css'
 import { Meta, NoteProvider } from '.'
 import { Main } from './styles'
 
-class Page extends Component {
-  static propTypes = {
-    children: PropTypes.object.isRequired,
+const Page = ({ children }) => {
+  Router.onRouteChangeStart = () => {
+    NProgress.start()
   }
 
-  render() {
-    const { children } = this.props
-
-    return (
-      <ThemeProvider theme={defaultTheme}>
-        <Fragment>
-          <Meta />
-          <GlobalStyle />
-          <NoteProvider>
-            <Main>{children}</Main>
-          </NoteProvider>
-        </Fragment>
-      </ThemeProvider>
-    )
+  Router.onRouteChangeComplete = () => {
+    NProgress.done()
   }
+
+  Router.onRouteChangeError = () => {
+    NProgress.done()
+  }
+
+  return (
+    <ThemeProvider theme={defaultTheme}>
+      <Fragment>
+        <Meta />
+        <GlobalStyle />
+        <NoteProvider>
+          <Main>{children}</Main>
+        </NoteProvider>
+      </Fragment>
+    </ThemeProvider>
+  )
+}
+
+Page.propTypes = {
+  children: PropTypes.object.isRequired,
 }
 
 export default Page

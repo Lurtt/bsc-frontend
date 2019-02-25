@@ -3,9 +3,11 @@ import PropTypes from 'prop-types'
 import { Mutation } from 'react-apollo'
 import gql from 'graphql-tag'
 import keycode from 'keycode'
+import Link from 'next/link'
 
+import { NOTE } from '../routes'
 import { useFormInput } from '../hooks'
-import { Title, Note, Icons, Button } from './styles'
+import { Title, Note, Icons, Button, TitleContainer, Info } from './styles'
 import { ALL_NOTES_QUERY, DeleteNote, Toggle, Switch } from '.'
 
 const UPDATE_NOTE_MUTATION = gql`
@@ -64,15 +66,28 @@ const NoteItem = ({ id, title, finished }) => {
           >
             {({ togglerProps }) => <Switch on={checked} {...togglerProps} />}
           </Toggle>
-          <Title
-            type="text"
-            ref={titleEl}
-            disabled={!isEditable}
-            finished={finished}
-            {...titleInput}
-            onKeyPress={e => handleOnKeyPress(e, updateNote)}
-            onBlur={() => handleOnBlur(updateNote)}
-          />
+          <TitleContainer>
+            <Title
+              type="text"
+              ref={titleEl}
+              disabled={!isEditable}
+              finished={finished}
+              {...titleInput}
+              onKeyPress={e => handleOnKeyPress(e, updateNote)}
+              onBlur={() => handleOnBlur(updateNote)}
+            />
+            <Link
+              href={{
+                pathname: NOTE,
+                query: { id },
+              }}
+            >
+              <Info as="a" style={{ cursor: 'pointer' }}>
+                detail
+              </Info>
+            </Link>
+          </TitleContainer>
+
           <Icons>
             {!checked && (
               <Button type="button" onClick={handleFocus} disabled={finished}>

@@ -1,2 +1,2 @@
 export const HOME = '/'
-export const SECOND = '/second'
+export const NOTE = '/note'
