@@ -11,7 +11,7 @@
   "created-at": "Vytvořeno: ",
   "updated-at": "Naposledy upraveno: ",
   "back": "zpět",
-  "change-locale": "Cestina",
+  "change-locale": "Čeština",
   "error-with-status": "Na serveru se vyskytla chyba {{statusCode}}",
   "error-without-status": "Na serveru se vyskytla chyba"
 }
