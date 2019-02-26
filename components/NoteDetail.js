@@ -4,6 +4,7 @@ import { Query } from 'react-apollo'
 import { format } from 'date-fns'
 import Link from 'next/link'
 
+import { withNamespaces } from '../i18n'
 import { HOME } from '../routes'
 import { Section, Header, Info } from './styles'
 
@@ -19,30 +20,30 @@ const NOTE_QUERY = gql`
   }
 `
 
-const NoteDetail = ({ id }) => (
+const NoteDetail = ({ id, t }) => (
   <Query query={NOTE_QUERY} variables={{ id }} fetchPolicy="cache-and-network">
     {({ data: { note }, loading }) => {
       if (loading)
         return (
           <Section>
-            <h1>Loading...</h1>
+            <h1>{t('loading')}</h1>
           </Section>
         )
       return (
         <Section>
-          <Header>Note Detail</Header>
+          <Header>{t('note-detail')}</Header>
           <Info>
-            {note.title}, [{note.finished ? 'finished' : 'unfinished'} note]
+            {note.title}, [{note.finished ? t('finished') : t('unfinished')}]
           </Info>
 
           <div>
-            Created at:{' '}
+            {t('created-at')}
             {format(new Date(note.createdAt), 'd MMMM YYYY HH:MM:ss', {
               awareOfUnicodeTokens: true,
             })}
           </div>
           <div>
-            Last update:{' '}
+            {t('updated-at')}
             {format(new Date(note.updatedAt), 'd MMMM YYYY HH:MM:ss', {
               awareOfUnicodeTokens: true,
             })}
@@ -53,7 +54,7 @@ const NoteDetail = ({ id }) => (
             }}
           >
             <Info as="a" style={{ cursor: 'pointer' }}>
-              back
+              {t('back')}
             </Info>
           </Link>
         </Section>
@@ -64,6 +65,7 @@ const NoteDetail = ({ id }) => (
 
 NoteDetail.propTypes = {
   id: PropTypes.string.isRequired,
+  t: PropTypes.func.isRequired,
 }
 
-export default NoteDetail
+export default withNamespaces('common')(NoteDetail)

@@ -1,0 +1,17 @@
+{
+  "notes": "Poznámky",
+  "create-note": "Vytvořit novou poznámku",
+  "create-note-info": "Stisknutím klávesy Enter vytvořís novou poznámku",
+  "loading": "Nahrávám...",
+  "no-record": "Nebyl nalezen žádný záznam",
+  "detail-link": "detail",
+  "note-detail": "Detail Poznámky",
+  "finished": "dokončeno",
+  "unfinished": "nedokončeno",
+  "created-at": "Vytvořeno: ",
+  "updated-at": "Naposledy upraveno: ",
+  "back": "zpět",
+  "change-locale": "Přepnout jazyk",
+  "error-with-status": "Na serveru se vyskytla chyba {{statusCode}}",
+  "error-without-status": "Na serveru se vyskytla chyba"
+}

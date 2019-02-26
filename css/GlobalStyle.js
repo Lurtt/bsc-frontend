@@ -169,26 +169,6 @@ const normalize = css`
 `
 
 const GlobalStyle = createGlobalStyle`
-    /* Medium */
-    @font-face {
-      font-family: 'San Francisco';
-      font-weight: normal;
-      src: url('https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff2');
-    }
-
-    /* Semi Bold */
-    @font-face {
-      font-family: 'San Francisco';
-      font-weight: 500;
-      src: url('https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff2');
-    }
-
-    /* Bold */
-    @font-face {
-      font-family: 'San Francisco';
-      font-weight: bold;
-      src: url('https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff2');
-    }
   ${normalize}
 `
 

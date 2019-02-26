@@ -3,6 +3,7 @@ import { ApolloProvider } from 'react-apollo'
 
 import withData from '../lib/withData'
 import { Page } from '../components'
+import { appWithTranslation } from '../i18n'
 
 class CustomizeApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -29,5 +30,6 @@ class CustomizeApp extends App {
     )
   }
 }
+const appWithData = appWithTranslation(CustomizeApp)
 
-export default withData(CustomizeApp)
+export default withData(appWithData)

@@ -13,6 +13,10 @@ const Meta = () => (
       href="https://fonts.googleapis.com/css?family=Open+Sans"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+    />
     <link rel="shortcut icon" href="/static/favicon.png" />
     <link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
 

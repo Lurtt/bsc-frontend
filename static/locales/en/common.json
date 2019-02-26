@@ -1,0 +1,17 @@
+{
+  "notes": "Notes",
+  "create-note": "What needs to be noted?",
+  "create-note-info": "Press Enter to create new note",
+  "loading": "Loading...",
+  "no-record": "No record found",
+  "detail-link": "detail",
+  "note-detail": "Note Detail",
+  "finished": "finished note",
+  "unfinished": "unfinished note",
+  "created-at": "Created at: ",
+  "updated-at": "Last update: ",
+  "back": "back",
+  "change-locale": "Change locale",
+  "error-with-status": "A {{statusCode}} error occurred on server",
+  "error-without-status": "An error occurred on the server"
+}

@@ -1,5 +1,10 @@
 import { Notes } from '../components'
+import { withNamespaces } from '../i18n'
 
 const Home = () => <Notes />
 
-export default Home
+Home.getInitialProps = async () => ({
+  namespacesRequired: ['common'],
+})
+
+export default withNamespaces('common')(Home)

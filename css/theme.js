@@ -1,6 +1,6 @@
 const font = {
   primary: 'Open Sans',
-  secondary: 'San Francisco',
+  secondary: 'Lato',
   small: '0.875rem',
   default: '1rem',
   large: '1.313rem',

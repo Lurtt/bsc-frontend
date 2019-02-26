@@ -5,6 +5,7 @@ import gql from 'graphql-tag'
 import keycode from 'keycode'
 import Link from 'next/link'
 
+import { withNamespaces } from '../i18n'
 import { NOTE } from '../routes'
 import { useFormInput } from '../hooks'
 import { Title, Note, Icons, Button, TitleContainer, Info } from './styles'
@@ -21,7 +22,7 @@ const UPDATE_NOTE_MUTATION = gql`
   }
 `
 
-const NoteItem = ({ id, title, finished }) => {
+const NoteItem = ({ id, title, finished, t }) => {
   const titleInput = useFormInput(title)
   const [checked, setChecked] = useState(finished)
   const [isEditable, setEditable] = useState(false)
@@ -83,7 +84,7 @@ const NoteItem = ({ id, title, finished }) => {
               }}
             >
               <Info as="a" style={{ cursor: 'pointer' }}>
-                detail
+                {t('detail-link')}
               </Info>
             </Link>
           </TitleContainer>
@@ -115,7 +116,8 @@ NoteItem.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   finished: PropTypes.bool.isRequired,
+  t: PropTypes.func.isRequired,
 }
 
 export { UPDATE_NOTE_MUTATION }
-export default NoteItem
+export default withNamespaces('common')(NoteItem)

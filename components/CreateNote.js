@@ -1,8 +1,10 @@
 import { useEffect, useRef, useContext } from 'react'
+import PropTypes from 'prop-types'
 import { Mutation } from 'react-apollo'
 import gql from 'graphql-tag'
 import keycode from 'keycode'
 
+import { withNamespaces } from '../i18n'
 import { Create, Info } from './styles'
 import { NoteContext } from '.'
 
@@ -14,7 +16,7 @@ const CREATE_NOTE_MUTATION = gql`
   }
 `
 
-const CreateNote = () => {
+const CreateNote = ({ t }) => {
   const inputEl = useRef(null)
   const { note, setNote } = useContext(NoteContext)
 
@@ -31,6 +33,7 @@ const CreateNote = () => {
       inputEl.current.focus()
     }
   }
+
   return (
     <Mutation
       mutation={CREATE_NOTE_MUTATION}
@@ -41,18 +44,22 @@ const CreateNote = () => {
         <div>
           <Create
             value={note}
-            placeholder="What needs to be noted?"
+            placeholder={t('create-note')}
             ref={inputEl}
             onChange={handleOnChange}
             onKeyPress={e => handleOnKeyPress(e, createNote)}
             disabled={loading}
             fullwidth
           />
-          {note && <Info>Press Enter to create new note</Info>}
+          {note && <Info>{t('create-note-info')}</Info>}
         </div>
       )}
     </Mutation>
   )
 }
 
-export default CreateNote
+CreateNote.propTypes = {
+  t: PropTypes.func.isRequired,
+}
+
+export default withNamespaces('common')(CreateNote)
