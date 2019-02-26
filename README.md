@@ -1,4 +1,4 @@
-# Frontend stack
+# bsc-frontend
 
 > Server side rendering app with Apollo Graphql Client.
 

@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "An example React, GraphQL, Next and Apollo",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lurtt/bsc-frontend.git"
+  },
   "scripts": {
     "dev": "node index.js",
     "build": "next build",
