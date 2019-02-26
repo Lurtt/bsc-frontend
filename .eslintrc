@@ -1,5 +1,10 @@
 {
-  "extends": ["airbnb", "prettier", "prettier/react"],
+  "extends": [
+    "airbnb",
+    "prettier",
+    "prettier/react",
+    "plugin:cypress/recommended"
+  ],
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 8,
@@ -13,7 +18,8 @@
     "browser": true,
     "node": true,
     "jquery": true,
-    "jest": true
+    "jest": true,
+    "cypress/globals": true
   },
   "rules": {
     "no-debugger": 0,
@@ -100,5 +106,5 @@
       }
     ]
   },
-  "plugins": ["prettier"]
+  "plugins": ["prettier", "cypress"]
 }
