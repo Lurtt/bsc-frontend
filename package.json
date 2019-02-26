@@ -10,8 +10,7 @@
     "test": "NODE_ENV=test jest",
     "test:watch": "NODE_ENV=test jest --watch",
     "test-win": "SET NODE_ENV=test&& jest --watch",
-    "cypress": "cypress run",
-    "cypress:open": "cypress open",
+    "cypress": "cypress open",
     "heroku-postbuild": "next build"
   },
   "author": "Lukas Pospisil",

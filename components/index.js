@@ -1,5 +1,6 @@
 export { default as Page } from './Page'
 export { default as Meta } from './Meta'
+export { default as Header } from './Header'
 
 export { NoteProvider, NoteContext } from './NoteContext'
 export { default as Notes } from './Notes'

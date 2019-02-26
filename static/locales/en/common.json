@@ -11,7 +11,7 @@
   "created-at": "Created at: ",
   "updated-at": "Last update: ",
   "back": "back",
-  "change-locale": "Change locale",
+  "change-locale": "English",
   "error-with-status": "A {{statusCode}} error occurred on server",
   "error-without-status": "An error occurred on the server"
 }
